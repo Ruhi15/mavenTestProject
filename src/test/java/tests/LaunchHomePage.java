@@ -23,15 +23,19 @@ public class LaunchHomePage {
 	  
 	  LoginPage page1 = PageFactory.initElements(driver, LoginPage.class);
 		  
+	  System.out.println("Home Page launched successfully");
 	  page1.enterUserName(prop.getInstance().getProperty("Username"));
+	  System.out.println("username entered successfully");
 	  page1.enterPassword(prop.getInstance().getProperty("Password"));
+	  System.out.println("password entered successfully");
 	  page1.clickLogin();
+	  System.out.println("logged in successfully");
 	  
 	  
   }
   @BeforeMethod
   public void beforeMethod() throws IOException {
-	  
+	  System.out.println("@@@@@@@@@@@@@@@@@@testing started@@@@@@@@@@@@@@@@@@");	  
 	  System.setProperty("webdriver.chrome.driver", prop.getInstance().getProperty("chrome_driver"));
 	   driver = new ChromeDriver();
 	  
@@ -41,8 +45,8 @@ public class LaunchHomePage {
 
   @AfterMethod
   public void afterMethod() {
-	  System.out.println("Home Page launched successfully");
 	  driver.quit();
+	  System.out.println("@@@@@@@@@@@@@@@@@@testing finised@@@@@@@@@@@@@@@@@@");
   }
 
 }
