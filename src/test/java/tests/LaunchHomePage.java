@@ -23,7 +23,7 @@ public class LaunchHomePage {
 	  
 	  LoginPage page1 = PageFactory.initElements(driver, LoginPage.class);
 		  
-	  page1.enterUserName(prop.getInstance().getProperty("Usernam"));
+	  page1.enterUserName(prop.getInstance().getProperty("Username"));
 	  page1.enterPassword(prop.getInstance().getProperty("Password"));
 	  page1.clickLogin();
 	  
